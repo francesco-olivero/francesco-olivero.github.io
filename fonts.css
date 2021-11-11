@@ -1,0 +1,10 @@
+@font-face {
+    font-family: 'Mattone 150';
+    src: local('Mattone 150'), local('Mattone-150'),
+        url('fonts/Mattone-150.woff2') format('woff2'),
+        url('fonts/Mattone-150.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+

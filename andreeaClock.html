@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>andreea's clock</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="clock.css">
+    <link rel="stylesheet" href="fonts.css">
+    <script>
+        /* Get the documentElement (<html>) to display the page in fullscreen */
+        var elem = document.documentElement;
+        
+        /* View in fullscreen */
+        function openFullscreen() {
+          if (elem.requestFullscreen) {
+            elem.requestFullscreen();
+          } else if (elem.webkitRequestFullscreen) { /* Safari */
+            elem.webkitRequestFullscreen();
+          } else if (elem.msRequestFullscreen) { /* IE11 */
+            elem.msRequestFullscreen();
+          }
+        }
+        
+        /* Close fullscreen */
+        function closeFullscreen() {
+          if (document.exitFullscreen) {
+            document.exitFullscreen();
+          } else if (document.webkitExitFullscreen) { /* Safari */
+            document.webkitExitFullscreen();
+          } else if (document.msExitFullscreen) { /* IE11 */
+            document.msExitFullscreen();
+          }
+        }
+        </script>
+</head>
+<body>
+    <p>
+        <span id='date-time'></span></p>
+    <ul>
+        <button class="button" id="fullscreen" onclick = "openFullscreen()">Full screen</button>
+        <button class="button" id="exitfull" onclick = "closeFullscreen()">Exit Full screen</button>
+    </ul>
+    <script>
+        setInterval(fTime, 1000);
+        function fTime() {
+            var data = new Date();
+            var ora = data.getHours();
+            if (ora < 10) {
+              ora = "0" + ora;
+            }
+            var minuto = data.getMinutes();
+            if (minuto < 10) {
+              minuto = "0" + minuto;
+            }
+            var hhmm = "" + ora + ":" + minuto;
+            document.getElementById('date-time').innerHTML=hhmm;
+        }
+    </script>
+</body>
+</html>

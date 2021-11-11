@@ -1,0 +1,55 @@
+html { 
+  background: url(aura.jpg) no-repeat center center fixed; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+p {
+    font-family: Mattone\ 150,sans-serif;
+    color:#fff;
+    margin:0;
+    position:absolute;
+    z-index:1;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%);
+    font-size:17.5vh;
+    transition:opacity .75s ease-in-out;
+    transition-delay:.25s
+}
+
+.button {
+    opacity: 0;
+    transition: opacity 0.5s ease;
+  }
+
+.button:hover {
+    opacity: 1;
+  }
+
+
+.button {
+    background-color: transparent;
+    border: 2px solid white;
+    border-radius: 8px;
+    box-sizing: border-box;
+    color: white;
+    cursor: pointer;
+    display: inline-block;
+    font-family: Mattone, sans-serif;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 20px;
+    margin: 0;
+    outline: none;
+    padding: 13px 23px;
+    position: relative;
+    text-align: center;
+    text-decoration: none;
+    touch-action: manipulation;
+    user-select: none;
+    -webkit-user-select: none;
+    width: auto;
+}
